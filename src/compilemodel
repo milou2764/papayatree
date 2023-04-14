@@ -1,0 +1,11 @@
+#!/bin/bash
+WINEPREFIX=~/.wine
+export WINEPREFIX
+WINEDEBUG=-all
+export WINEDEBUG
+WINEARCH=win32
+export WINEARCH
+wine ~/.wine/drive_c/steamcmd/steamapps/common/GarrysMod/bin/studiomdl.exe -nop4 tree_papaya.qc
+
+rm -r /home/milou/.local/share/Steam/steamapps/common/GarrysMod/garrysmod/addons/papayatree/models
+mv /home/milou/.local/share/Steam/steamapps/common/GarrysMod/garrysmod/models /home/milou/.local/share/Steam/steamapps/common/GarrysMod/garrysmod/addons/papayatree/

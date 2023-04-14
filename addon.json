@@ -1,0 +1,12 @@
+{
+	"title"		:	"papaya_tree",
+	"type"		:	"model",
+	"ignore"	:
+	[
+		"*.sh",
+		".git/*",
+		".gitignore",
+		"src/*",
+		"icon.jpg"
+	]
+}

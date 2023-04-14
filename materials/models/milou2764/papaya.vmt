@@ -1,0 +1,5 @@
+vertexlitgeneric
+{
+    $basetexture models/milou2764/papaya
+    $bumpmap models/milou2764/papaya_normal
+}

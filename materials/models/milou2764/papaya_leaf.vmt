@@ -1,0 +1,7 @@
+vertexlitgeneric
+{
+    $basetexture models/milou2764/papaya_leaf
+    $bumpmap models/milou2764/papaya_leaf_normal
+    $alphatest 1
+    $nocull 1
+}

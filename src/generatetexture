@@ -1,0 +1,38 @@
+#!/bin/bash
+mkdir -p ../materials/models/milou2764
+
+# trunk
+vtex2 convert -f dxt1 -o ../materials/models/milou2764/papaya_trunk.vtf papaya_trunk.jpg
+vtex2 convert -n -o ../materials/models/milou2764/papaya_trunk_normal.vtf papaya_trunk_normal.jpg
+echo -n "vertexlitgeneric
+{
+    \$basetexture models/milou2764/papaya_trunk
+    \$bumpmap models/milou2764/papaya_trunk_normal
+}" > "../materials/models/milou2764/papaya_trunk.vmt"
+
+# leaf
+vtex2 convert -f dxt5 -o ../materials/models/milou2764/papaya_leaf.vtf papaya_leaf.png
+vtex2 convert -n -o ../materials/models/milou2764/papaya_leaf_normal.vtf papaya_leaf_normal.jpg
+echo -n "vertexlitgeneric
+{
+    \$basetexture models/milou2764/papaya_leaf
+    \$bumpmap models/milou2764/papaya_leaf_normal
+    \$alphatest 1
+    \$nocull 1
+}" > "../materials/models/milou2764/papaya_leaf.vmt"
+
+# branch
+vtex2 convert -f dxt1 -o ../materials/models/milou2764/papaya_branch.vtf papaya_branch.jpg
+echo -n "vertexlitgeneric
+{
+    \$basetexture models/milou2764/papaya_branch
+}" > "../materials/models/milou2764/papaya_branch.vmt"
+
+# papaya
+vtex2 convert -f dxt1 -o ../materials/models/milou2764/papaya.vtf papaya.jpg
+vtex2 convert -n -o ../materials/models/milou2764/papaya_normal.vtf papaya_normal.jpg
+echo -n "vertexlitgeneric
+{
+    \$basetexture models/milou2764/papaya
+    \$bumpmap models/milou2764/papaya_normal
+}" > "../materials/models/milou2764/papaya.vmt"
